@@ -6,7 +6,10 @@ class NavbarController {
     'title': 'Home',
     'state': 'main'
   },{
-    'title': 'Tracking Maps',
+    'title': 'Business',
+    'state': 'costumerAdm'
+  },{
+    'title': 'Monitoring',
     'state': 'trackingMap'
   }
   ];

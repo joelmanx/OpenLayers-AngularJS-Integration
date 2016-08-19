@@ -7,22 +7,29 @@
 </header>
 <div class="container">
   <div class="row">
-    <div class="col-lg-12">
-      <h1>Tracking my Car</h1>
-      <p>This map uses a Bing source. You must request an API key to use these maps <a href="http://www.bingmapsportal.com">here</a>.</p>
-
-      <ul>
-          <li style="display: inline" ng-repeat="imagerySet in [ 'AerialWithLabels','Road' ]">
-              <button ng-click="bing.source.imagerySet=imagerySet" class="btn btn-default" ng-bind="imagerySet"></button>
-          </li>
-      </ul>
-    </div>
-    <div class="col-lg-12">
-      <openlayers ol-center="center" height="400px" width="100%">
+    <h1>Tracking my Car</h1>
+      <p>This map shows the cars and vehicles whit GPS devices installed and suscriptors in the system TRADIX</p>
+    <div class="col-lg-12 col-md-12">
+      <div class="col-lg-3 col-md-3 col-sm-3form-group">
+        <ul ng-repeat="user in $ctrl.usuarios track by $index">
+          <li><a ng-click="$ctrl.openLocation($index)">{{user.nombre}}</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-9 col-md-9 col-sm-9">
+        <openlayers ol-center="center" height="400px" width="100%">
           <ol-layer ol-layer-properties="bing"></ol-layer>
-      </openlayers>
-      
+          <ol-marker ng-repeat="user in $ctrl.usuarios track by $index" name="London" lat="user.coordenadas.lat" lon="user.coordenadas.long"></ol-marker>
+        </openlayers>   
+        <div class="col-lg-12">
+          <ul>
+              <li style="display: inline" ng-repeat="imagerySet in [ 'AerialWithLabels','Road' ]">
+                  <button ng-click="bing.source.imagerySet=imagerySet" class="btn btn-default" ng-bind="imagerySet"></button>
+              </li>
+          </ul>
+        </div> 
+      </div>    
     </div>
+    
   </div>
   
 </div>
