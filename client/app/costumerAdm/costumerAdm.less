@@ -1,0 +1,87 @@
+@backgroundColorLi:#5a7fab;
+@colorTextLi:white;
+
+.lista{
+	background: @backgroundBox;
+	width: 60%;
+	padding: 10px;
+	border: 1px solid #ddd;
+	margin-bottom: 20px;
+	transition:height .3s ease-in;
+	ul{
+		margin: 0;
+		padding: 0;
+	}
+	li{
+		list-style: none;
+	    padding: 0;
+	    margin: 6px;
+		color: @colorTextLi;
+		background:@backgroundColorLi;
+		
+	}
+}
+
+.itemlista{
+    //padding: 10px;
+	overflow: hidden;
+	&:hover{
+	//	transform: scale(1.1); 
+		background: grey;
+	//	box-shadow: 0 2px 2px #000;
+	}
+	&.doneStyle{
+		background: #ffffff;
+    	color: #86b7e6;
+		label{
+			text-decoration: line-through;
+		}
+	}
+	label{
+		padding: 8px;
+		margin: 0;
+		cursor: pointer;
+		float: left;
+	}
+	input[type='checkbox']{
+		width: 16px;
+	    height: 16px;
+	    top: 2px;
+	    position: relative;
+	    margin-right: 8px;
+	    margin-top: 0;
+	}	
+	button{
+		    float: right;
+  		    margin: 4px 10px;
+	}
+}
+
+.justforFun{
+	background: yellow;
+	border: 2px dotted orange;
+}
+
+
+// Classes that works with ngAnimate
+
+.todoitem{
+	position: relative;
+    padding: 5px;
+	transition:all 0.5s ease-out; 	
+	&.ng-enter{
+		opacity: 0;
+		left: 200px;
+	}
+	&.ng-enter-active{
+		left: 0;
+		opacity: 1;	
+	}
+	&.ng-leave{
+		opacity: 1;
+	}
+	&.ng-leave-active{
+		left: 200px;
+		opacity: 0;	
+	}
+}

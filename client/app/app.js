@@ -7,7 +7,8 @@ angular.module('radarProjectApp', [
   'ngSanitize',
   'ui.router',
   'ui.bootstrap',
-  'openlayers-directive'
+  'openlayers-directive',
+  'radarProjectApp.costumerServices'
 ])
   .config(function($urlRouterProvider, $locationProvider) {
     $urlRouterProvider

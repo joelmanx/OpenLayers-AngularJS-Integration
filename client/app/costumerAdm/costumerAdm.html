@@ -1,1 +1,16 @@
-<div>This is the costumerAdm view.</div>
+<div class="lista center-block md-lg-12">
+<h3>Costumers of Systems</h3>
+
+<button class="btn btn-success" ><span class="glyphicon glyphicon-plus"> </span> Add new Costumer</button>
+<ul>
+    <li class="itemlista" ng-repeat="costumer in $ctrl.list">
+        <label>
+            <img width="50px" ng-src="{{$ctrl.printURL(costumer.vehicle.type)}}">&nbsp;&nbsp;&nbsp;{{costumer.name}}  
+            <em class="text-uppercase">[{{costumer.vehicle.plate}}]</em>
+        </label>
+        <button class="btn btn-warning" ><span class="glyphicon glyphicon-list"> </span> Details</button>
+        <button class="btn btn-danger" ><span class="glyphicon glyphicon-remove"> </span> Delete</button>
+    </li>
+    
+</ul>
+</div>
