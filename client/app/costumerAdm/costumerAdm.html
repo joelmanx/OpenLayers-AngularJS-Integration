@@ -1,7 +1,7 @@
 <div class="lista center-block md-lg-12">
 <h3>Costumers of Systems</h3>
 
-<button class="btn btn-success" ><span class="glyphicon glyphicon-plus"> </span> Add new Costumer</button>
+<button class="btn btn-success" ng-click="$ctrl.addCostumer()" ><span class="glyphicon glyphicon-plus"> </span> Add new Costumer</button>
 <ul>
     <li class="itemlista" ng-repeat="costumer in $ctrl.list">
         <label>

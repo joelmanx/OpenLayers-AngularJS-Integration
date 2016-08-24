@@ -23,6 +23,10 @@ class CostumerAdmComponent {
     this.list=service.getListOfCostumers();
   }
 
+  addCostumer(){
+    window.alert("ADD_COSTUMER function not yet Implemented!!");
+  }
+
   printURL(type){
     switch(type){
       case "A":{
