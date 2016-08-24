@@ -8,7 +8,7 @@
             <img width="50px" ng-src="{{$ctrl.printURL(costumer.vehicle.type)}}">&nbsp;&nbsp;&nbsp;{{costumer.name}}  
             <em class="text-uppercase">[{{costumer.vehicle.plate}}]</em>
         </label>
-        <button class="btn btn-warning" ><span class="glyphicon glyphicon-list"> </span> Details</button>
+        <button class="btn btn-warning" ng-click="$ctrl.detailsCostumer(costumer.id)" ><span class="glyphicon glyphicon-list"> </span> Details</button>
         <button class="btn btn-danger" ><span class="glyphicon glyphicon-remove"> </span> Delete</button>
     </li>
     

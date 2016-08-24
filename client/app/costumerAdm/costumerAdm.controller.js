@@ -23,6 +23,10 @@ class CostumerAdmComponent {
     this.list=service.getListOfCostumers();
   }
 
+  detailsCostumer(id){
+    window.alert(id+" view DETAILS not yet implemented  !!!");
+  }
+
   printURL(type){
     switch(type){
       case "A":{
