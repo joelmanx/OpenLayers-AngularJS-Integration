@@ -23,8 +23,8 @@ class CostumerAdmComponent {
     this.list=service.getListOfCostumers();
   }
 
-  addCostumer(){
-    window.alert("ADD_COSTUMER function not yet Implemented!!");
+  deleteCostumer(id){
+    window.alert(id+" was DELETED successfully !!!");
   }
 
   printURL(type){
